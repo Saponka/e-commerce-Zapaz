@@ -6,7 +6,7 @@ export default function ErrorPage() {
 
   return (
     <div id="error-page">
-      <h1 className="title">Oops!</h1>
+      <h1 className="titulo">Oops!</h1>
       <img src="https://i.pinimg.com/originals/9d/cb/65/9dcb656df62520ce2b580ad6c45c8429.gif" alt="" />
       <p className="mensaje">Sorry, an unexpected error has occurred.</p>
       <p >
