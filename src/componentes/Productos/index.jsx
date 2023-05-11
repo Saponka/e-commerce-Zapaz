@@ -4,8 +4,11 @@ import Data from "../../assets/images/Data"
 const ProductosLista = () => {
   return (
     <>
-    {/* { Data.items.map((zapa,id)=>{
+    <h1 className="title">Productos</h1>
+    <div className="productos">
+    { Data.items.map((zapa,id)=>{
       return (
+        
         <div className="producto" key={id}>
           <a href="#">
             <div className="producto_img">
@@ -22,9 +25,14 @@ const ProductosLista = () => {
             <a href="/detalle" className="btn2"><button className="btn2">Vista</button></a>
           </div>
         </div>
+        
       )
-    })  } */}
-      <h1 className="title">Productos</h1>
+    })  }
+    </div>
+
+{/* ---------------------------------------------------------------- */}
+
+      {/* <h1 className="title">Productos</h1>
       <div className="productos">
         <div className="producto">
           <a href="#">
@@ -42,7 +50,6 @@ const ProductosLista = () => {
             <a href="/detalle" className="btn2"><button className="btn2">Vista</button></a>
           </div>
         </div>
-
         <div className="producto">
           <a href="#">
             <div className="producto_img">
@@ -59,7 +66,6 @@ const ProductosLista = () => {
             <a href="/detalle" className="btn2"><button className="btn2">Vista</button></a>
           </div>
         </div>
-
         <div className="producto">
           <a href="#">
             <div className="producto_img">
@@ -75,8 +81,7 @@ const ProductosLista = () => {
             <button className="btn">Añadir</button>
             <a href="/detalle" className="btn2"><button className="btn2">Vista</button></a>
           </div>
-        </div>
-
+        </div> 
         <div className="producto">
           <a href="#">
             <div className="producto_img">
@@ -93,7 +98,9 @@ const ProductosLista = () => {
             <a href="/detalle" className="btn2"><button className="btn2">Vista</button></a>
           </div>
         </div>
-      </div>
+      </div> */}
+
+{/* --------------------------------------- */}
     </>
   );
 };
