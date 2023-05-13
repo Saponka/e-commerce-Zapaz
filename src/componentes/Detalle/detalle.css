@@ -1,0 +1,25 @@
+.contenedor{
+    width: 100%;
+    height: 80vh;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.imgDetalleContainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+#detalleImg{
+    width: fit-content;
+}
+.caracteristicas{
+    border: 1px solid rgb(12, 12, 12);
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 2fr;
+}
+.botones{
+    display: flex;
+}

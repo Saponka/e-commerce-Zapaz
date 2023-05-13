@@ -113,6 +113,57 @@ const data = {
       img2: ".jpg?auto=format,compress&q=90&updated_at=1609438911&w=1000",
       cantidad: 1
     },  
+    {
+      id: 12,
+      title: "NIKE DUNK LOW SP MAÍZ UNIVERSITARIO BRASIL",
+      price: 548,
+      image: '../../src/assets/images/Nike.jpg',
+      category: "nike",
+      img1: "https://stockx-360.imgix.net/Nike-Air-Rubber-Dunk-Off-White-UNC/Images/Nike-Air-Rubber-Dunk-Off-White-UNC/Lv2/img",
+      img2: ".jpg?auto=format,compress&q=90&updated_at=1609438911&w=1000",
+      cantidad: 1
+    },
+    {
+      id: 13,
+      title: "Zapatillas Jordan Air 1 Low SE",
+      price: 58.499,
+      image: 'https://www.moov.com.ar/on/demandware.static/-/Sites-365-dabra-catalog/default/dw6827f014/products/NIDQ8422-001/NIDQ8422-001-1.JPG',
+      category: "nike",
+      img1: "https://stockx-360.imgix.net/Nike-Air-Rubber-Dunk-Off-White-UNC/Images/Nike-Air-Rubber-Dunk-Off-White-UNC/Lv2/img",
+      img2: ".jpg?auto=format,compress&q=90&updated_at=1609438911&w=1000",
+      cantidad: 1
+    },  
+    {
+      id: 14,
+      title: "Nike Dunk High Retro",
+      price: 77.999,
+      image: 'https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/fd17b420-b388-4c8a-aaaa-e0a98ddf175f/calzado-dunk-high-retro-dTVTCk.png',
+      category: "nike",
+      img1: "https://stockx-360.imgix.net/Nike-Air-Rubber-Dunk-Off-White-UNC/Images/Nike-Air-Rubber-Dunk-Off-White-UNC/Lv2/img",
+      img2: ".jpg?auto=format,compress&q=90&updated_at=1609438911&w=1000",
+      cantidad: 1
+    },  
+    {
+      id: 15,
+      title: "Zapatillas Jordan Air 1 Mid",
+      price: 77.999,
+      image: 'https://www.moov.com.ar/on/demandware.static/-/Sites-365-dabra-catalog/default/dw0db7b0da/products/NI_554724-079/NI_554724-079-1.JPG',
+      category: "nike",
+      img1: "https://stockx-360.imgix.net/Nike-Air-Rubber-Dunk-Off-White-UNC/Images/Nike-Air-Rubber-Dunk-Off-White-UNC/Lv2/img",
+      img2: ".jpg?auto=format,compress&q=90&updated_at=1609438911&w=1000",
+      cantidad: 1
+    },  
+    {
+      id: 16,
+      title: "Zapatillas Nike Dunk Low SE",
+      price: 62.699,
+      image: 'https://www.moov.com.ar/on/demandware.static/-/Sites-365-dabra-catalog/default/dw2faa8c09/products/NIDZ5350-288/NIDZ5350-288-1.JPG',
+      category: "nike",
+      img1: "https://stockx-360.imgix.net/Nike-Air-Rubber-Dunk-Off-White-UNC/Images/Nike-Air-Rubber-Dunk-Off-White-UNC/Lv2/img",
+      img2: ".jpg?auto=format,compress&q=90&updated_at=1609438911&w=1000",
+      cantidad: 1
+    },  
+    
 
     /* {
       id: 1,
