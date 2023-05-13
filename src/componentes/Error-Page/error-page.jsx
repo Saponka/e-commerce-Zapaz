@@ -10,7 +10,7 @@ export default function ErrorPage() {
       {/* https://media.tenor.com/A4juFPgw0CMAAAAC/me-voy.gif 
           https://i.pinimg.com/originals/9d/cb/65/9dcb656df62520ce2b580ad6c45c8429.gif
       */}
-      <img src="https://media.tenor.com/A4juFPgw0CMAAAAC/me-voy.gif" alt="" />
+      <img id="gif" src="https://media.tenor.com/A4juFPgw0CMAAAAC/me-voy.gif" alt="" />
       <p className="mensaje">Sorry, an unexpected error has occurred.</p>
       <p >
         <i >{error.statusText || error.message}</i>

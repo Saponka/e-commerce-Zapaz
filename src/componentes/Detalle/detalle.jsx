@@ -22,7 +22,7 @@ const Detalle = () => {
             <button className="btn">Vista</button>
           </div>
           </div>
-          <a style={{textDecoration:"none",color:"Lime",fontSize:"25px"}} href="/productos"> Volver</a>
+          <a style={{textDecoration:"none",color:"Lime",fontSize:"25px"}} href="/productos"><box-icon name='chevrons-left' type='solid' animation='fade-right' color='#1be420' ></box-icon>Volver</a>
     </div>
   )
 }
