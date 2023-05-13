@@ -2,10 +2,15 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
-//react router dom nuevo con vite-react
-import ErrorPage from "./error-page";
+/* redux */
+import { Provider } from 'react-redux';
+import { store } from './redux/store';
+
+//import componentes
+import ErrorPage from "./componentes/Error-Page/error-page.jsx";
 import Inicio from './componentes/Inicio/inicio.jsx';
-import Detalle from './routes/detalle.jsx';
+import Detalle from './componentes/Detalle/detalle.jsx';
+//react router dom nuevo con vite-react
 import {
   createBrowserRouter,
   RouterProvider,
@@ -29,9 +34,14 @@ const router = createBrowserRouter([
    
   },
 ]);
+
+/* ------------------------------------------ */
 ReactDOM.createRoot(document.getElementById('root')).render(
+  
+  <Provider store={store}>
   <React.StrictMode>
      <RouterProvider router={router} />
    {/*  <App /> */}
-  </React.StrictMode>,
+  </React.StrictMode>
+  </Provider>,
 )
