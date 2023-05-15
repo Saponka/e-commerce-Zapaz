@@ -1,7 +1,7 @@
 .contenedor{
     width: 100%;
     /* height: 100vh; */
-    /* border: 2px solid black; */
+   
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -18,7 +18,7 @@
 }
 .caracteristicas{
     background-color: gainsboro;
-    border: 3px solid rgb(12, 12, 12);
+    
     border-radius: 5px;
     width: 90%; 
     margin: 20px ;
@@ -38,9 +38,9 @@
     background-color: rgb(70, 180, 87);
     font-size: 1.5rem; 
     font-weight: 700;
-    border: none;
+   
     border-radius: 5px;
-  /*   outline: 0; */
+  
     cursor: pointer;
     max-width: 100px;
     margin: 0 auto;
@@ -50,17 +50,21 @@ a box-icon{
 }
 
 /* medias querys */
-@media only screen and (max-width:720px){
+@media only screen and (max-width:700px){
     .caracteristicas {
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 80%;
     }
+    #detalleImg{
+        width: 500px   ;
+      }
   }
-@media only screen and (max-width:700px){
+@media only screen and (max-width:500px){
+    #detalleImg{
+        width: 400px   ;
+      }
     
-    .imgDetalleContainer{
-        display: block;
-        width: 460px;
-    }
+    
   }
