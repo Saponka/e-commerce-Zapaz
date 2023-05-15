@@ -12,10 +12,10 @@ const Detalle = () => {
             </div>
           
           <div className="caracteristicas">
-            <h1>Nombre Zapatilla</h1>
-            <p>categoria:Urban</p>
-            <p className="price">$879</p>
-            <p className="cantidad">cantidad:5</p>
+            <h1 style={{textAlign:"center"}}>NIKE DUNK LOW SP MAÍZ UNIVERSITARIO BRASIL</h1>
+            <p>Categoria:Urban</p>
+            <p className="price"> Precio:$879</p>
+            <p className="cantidad">Cantidad:5</p>
           <div className="botones">
             <button className="btnCarac">Añadir</button>
             <button className="btnCarac">Vista</button>

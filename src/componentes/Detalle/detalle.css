@@ -20,11 +20,12 @@
     border-radius: 5px;
     /* width: 90%;  */
     margin: 20px ;
-    padding: 25px;
+    padding: 20px;
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr 2fr;
+    /* grid-template-columns: 2fr 1fr 1fr 1fr 2fr; */
     gap: 10px;
     box-shadow: 0px 5px 10px mediumpurple;
+    justify-content: center;
 }
 .botones{
     display: flex;
@@ -47,12 +48,12 @@ a box-icon{
 }
 
 /* medias querys */
-@media only screen and (max-width:700px){
+@media only screen and (max-width:820px){
     .caracteristicas {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 80%;
+        /* width: 80%; */
     }
     #detalleImg{
         width: 500px   ;
