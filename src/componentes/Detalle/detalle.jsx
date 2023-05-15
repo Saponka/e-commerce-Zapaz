@@ -3,15 +3,14 @@ import "./detalle.css"
 const Detalle = () => {
 
   return (
-    <div>
-      <h1 style={{textAlign:"center"}}>Detalle</h1>
+    <div >
+     
       <div className="contenedor" >
           
             <div className="imgDetalleContainer" >
               <img id='detalleImg' src="../src/assets/images/Nike.jpg"alt="" />
             </div>
           
-        </div>
           <div className="caracteristicas">
             <h1>Nombre Zapatilla</h1>
             <p>categoria</p>
@@ -22,7 +21,8 @@ const Detalle = () => {
             <button className="btn">Vista</button>
           </div>
           </div>
-          <a style={{textDecoration:"none",color:"Lime",fontSize:"25px"}} href="/productos"><box-icon name='chevrons-left' type='solid' animation='fade-right' color='#1be420' ></box-icon>Volver</a>
+          <a style={{textDecoration:"none",color:"Lime",fontSize:"25px"}} href="/productos"><box-icon  name='chevrons-left' type='solid' animation='fade-right' color='#1be420' ></box-icon>Volver</a>
+        </div>
     </div>
   )
 }
