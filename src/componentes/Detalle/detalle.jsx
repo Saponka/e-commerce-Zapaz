@@ -17,8 +17,8 @@ const Detalle = () => {
             <p className="price">$879</p>
             <p className="cantidad">cantidad</p>
           <div className="botones">
-            <button className="btn">Añadir</button>
-            <button className="btn">Vista</button>
+            <button className="btnCarac">Añadir</button>
+            <button className="btnCarac">Vista</button>
           </div>
           </div>
           <a style={{textDecoration:"none",color:"Lime",fontSize:"25px"}} href="/productos"><box-icon  name='chevrons-left' type='solid' animation='fade-right' color='#1be420' ></box-icon>Volver</a>
