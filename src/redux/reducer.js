@@ -1,4 +1,4 @@
-import { GET_PRODUCTOS,/* GET_PRODUCTOS_BY_ID */} from "./actions";
+import { GET_PRODUCTOS, GET_DETAIL } from "./actions";
 
 
 const initialState = () => {
@@ -6,11 +6,8 @@ const initialState = () => {
     //const initialCart = cartInLocalStorage ? JSON.parse(cartInLocalStorage) : []
     return {
         allProductos: [],
-        producto: [],
-        /* user: [],
-        token: [],
-        cart: initialCart,
-        numberCart: initialCart.length, */
+        detail: [],
+        
     };
 };
 
@@ -22,11 +19,11 @@ export default function rootReducer(state = initialState(), action) {
                 allProductos : action.payload,
             }
         }
-        /* case GET_PRODUCTOS_BY_ID:
+         case GET_DETAIL:
             return {
                 ...state,
-                producto: action.payload
-            } */
+                detail: action.payload
+            } 
       
         default:
             return state;

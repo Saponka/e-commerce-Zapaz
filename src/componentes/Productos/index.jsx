@@ -7,28 +7,28 @@ import { Link } from "react-router-dom";
 
 
 const ProductosLista = () => {
-       
-
-
-     const dispatch = useDispatch();
+      
+  
+  const dispatch = useDispatch();
      
      const productos = useSelector((state) => state.allProductos)
 
-     const [producto, setProducto] = useState();
+     const [producto, setProducto] = useState([]);
 
      useEffect(()=>{
        setProducto([...productos])
       },[productos]);
 
-     useEffect(()=>{
-          dispatch(getProductos())
+      useEffect(()=>{
+        dispatch(getProductos())
       }, [dispatch]);
-
+      
+      console.log(productos);
   return (
     <>
     <h1 className="title">Productos</h1>
     <div className="productos">
-    { productos.map((zapa,id)=>{
+    { productos.map((zapa)=>{
       return (
         
         <div className="producto" key={zapa.id}>
@@ -44,7 +44,7 @@ const ProductosLista = () => {
           </div>
           <div className="button">
             <button className="btn">Añadir</button>
-            <button className="btn2"><Link to={`detalle/${zapa.id}`}>Vista</Link></button>
+            <button className="btn2"><Link  to={`detalle/${zapa.id}`}>Vista</Link></button>
             
             {/* <a href={`detalle/${id+1}`} className="btn2"><button className="btn2">Vista</button></a> */}
           </div>
