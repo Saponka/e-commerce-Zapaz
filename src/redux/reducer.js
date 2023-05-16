@@ -1,4 +1,4 @@
-import { GET_PRODUCTOS,GET_PRODUCTOS_BY_NAME } from "./actions";
+import { GET_PRODUCTOS,/* GET_PRODUCTOS_BY_ID */} from "./actions";
 
 
 const initialState = () => {
@@ -22,11 +22,11 @@ export default function rootReducer(state = initialState(), action) {
                 allProductos : action.payload,
             }
         }
-        case GET_PRODUCTOS_BY_NAME:
+        /* case GET_PRODUCTOS_BY_ID:
             return {
                 ...state,
-                allProductos: action.payload
-            }
+                producto: action.payload
+            } */
       
         default:
             return state;
