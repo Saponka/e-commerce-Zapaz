@@ -4,6 +4,8 @@ import "./detalle.css";
 //import { getProductoId } from '../../redux/actions';
 import { useParams } from "react-router-dom";
 import Data from "../../Data";
+import { useDispatch } from "react-redux";
+import { cartAdd } from "../../redux/actions";
 //import { useDispatch, useSelector } from "react-redux";
 //import { getById } from "../../redux/actions";
 
@@ -18,6 +20,8 @@ const Detalle = () => {
     const producto = product.find((item)=> item.id == id) ;
     setProducto(producto);
   },[])
+
+  const dispatch = useDispatch();
 
   ////////////////////////////////
 /*  
@@ -51,7 +55,9 @@ const Detalle = () => {
           <p className="price"> Precio:${producto.price}</p>
           <p className="cantidad">Cantidad:{producto.cantidad}</p>
           <div className="botones">
-            <button className="btnCarac">Añadir</button>
+            <button className="btnCarac" onClick={()=>{
+              dispatch(cartAdd(producto))
+            }}>Añadir</button>
             <button className="btnCarac">Comprar</button>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import Nike from "../../assets/images/Nike.jpg";
+import { Link } from "react-router-dom";
 
 const Header = () => {
 
@@ -20,10 +21,12 @@ const Header = () => {
           <a href="/productos">Productos</a>
         </li>
       </ul>
-      <div className="cart">
+        <Link to="/carrito">
+       <div className="cart">
         <box-icon name="cart"></box-icon>
         <span className="item_total"> 0</span>
       </div>
+      </Link>
     </header>
   );
 };
