@@ -4,40 +4,41 @@ import "./detalle.css";
 //import { getProductoId } from '../../redux/actions';
 import { useParams } from "react-router-dom";
 import Data from "../../Data";
+//import { useDispatch, useSelector } from "react-redux";
+//import { getById } from "../../redux/actions";
 
 const Detalle = () => {
 
   const { id } = useParams();
   ///////funciona/asi si, sin use Effect, ni use State;////////
-  /* const [producto, setProducto] = useState([]);
+   const [producto, setProducto] = useState({});
   let product = Data.items;
-  const zapatilla = product.find((item)=> item.id == id) */
+  
+  useEffect(()=>{
+    const producto = product.find((item)=> item.id == id) ;
+    setProducto(producto);
+  },[])
 
   ////////////////////////////////
-  const [producto, setProducto] = useState([]);
-
+/*  
     useEffect(() => {
     let product = Data.items;
     setProducto([...product]);
   }, []); 
-
-  const zapatilla = producto.find((item)=> item.id == id)
   console.log(producto);
   console.log(id);
-  console.log("zapatilla por find ID:",zapatilla);
+  console.log("zapatilla por find ID:",zapatilla); */
 
-  /////////////////////////////////////////
+  /////////////////////////////////////////  
+/*   const dispatch = useDispatch();
+  const detalle = useSelector((state) => state.detail);
+  console.log(id);
+  console.log(detalle);
 
-  //const dispatch = useDispatch()
-  //const producto = useSelector((state) => state.producto)
-  /*  useEffect(()=>{
-         dispatch(getProductoId(id))
-     }, [dispatch,id]);
- */
-
-  /*   useEffect(() => {
-      dispatch(getVideoGamesId(id)).then(() => setCarga(false))
-     }, [dispatch, id]); */
+  useEffect(() => {
+    dispatch(getById(id));
+  }, [dispatch, id]); */
+ 
   return (
     <>
       <div className="contenedor">
