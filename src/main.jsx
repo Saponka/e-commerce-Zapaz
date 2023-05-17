@@ -10,13 +10,12 @@ import { store } from './redux/store';
 import ErrorPage from "./componentes/Error-Page/error-page.jsx";
 import Inicio from './componentes/Inicio/inicio.jsx';
 import Detalle from './componentes/Detalle/detalle.jsx';
+import Cart from './componentes/Cart/cart.jsx';
 //react router dom nuevo con vite-react
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-
-
 
 const router = createBrowserRouter([
   {
@@ -32,6 +31,12 @@ const router = createBrowserRouter([
   {
     path: "productos/detalle/:id",
     element: <Detalle />,
+    errorElement: <ErrorPage />,
+   
+  },
+  {
+    path: "/carrito",
+    element: <Cart />,
     errorElement: <ErrorPage />,
    
   },
