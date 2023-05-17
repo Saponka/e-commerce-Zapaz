@@ -12,7 +12,7 @@ const Detalle = () => {
   const { id } = useParams();
   ///////funciona/asi si, sin use Effect, ni use State;////////
    const [producto, setProducto] = useState({});
-  let product = Data.items;
+   let product = Data.items;
   
   useEffect(()=>{
     const producto = product.find((item)=> item.id == id) ;
