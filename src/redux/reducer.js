@@ -6,7 +6,7 @@ const initialState = () => {
     //const initialCart = cartInLocalStorage ? JSON.parse(cartInLocalStorage) : []
     return {
         allProductos: [],
-        detail: [],
+        detail: {},
         
     };
 };
