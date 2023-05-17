@@ -24,26 +24,14 @@ export function getById(id){
     return async function (dispatch) {
         try{
           let detalle =  await axios.get(`http://localhost:5173/productos/detalle/${id}`);
+          //let detalle =  Data;
          return dispatch({
                 type:GET_DETAIL,
-                payload: detalle.data,
+                payload: detalle.items,
             });
         }
         catch(error){
-         return console.log("No se encuentra detalle de personaje")
+         return console.log("No se encuentra detalle de producto")
         }
     }
 };
-/*  export const getProductoId = (id) => {
-    return  (dispatch) => {
-        try {
-            let data =  axios.get(`http://localhost:5173/productos/detalle/${id}`); 
-            //let data =  Data;      
-            return dispatch({ 
-                type: GET_PRODUCTOS_BY_ID,
-                payload: data.items });
-        } catch(error) {
-            console.error(error);
-        }
-    }
-};  */
