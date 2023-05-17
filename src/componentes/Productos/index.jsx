@@ -15,6 +15,8 @@ const ProductosLista = () => {
 
      const [producto, setProducto] = useState([]);
 
+     
+
      useEffect(()=>{
        setProducto([...productos])
       },[productos]);

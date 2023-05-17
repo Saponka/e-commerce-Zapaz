@@ -1,6 +1,10 @@
 import React from "react";
 import Nike from "../../assets/images/Nike.jpg";
+
 const Header = () => {
+
+    
+
   return (
     <header>
       <a href="/">

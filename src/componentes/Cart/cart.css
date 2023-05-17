@@ -107,3 +107,40 @@ width: 60px;
 height: 80px;
 fill: crimson;
 }
+.carrito__footer{
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.carrito__footer h3{
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 10px;
+}
+.btnFooter{
+    display: inline-block;
+    padding: .3rem 1rem;
+    font-size: 1.2rem;
+    background-color: rgb(105, 194, 16);
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.btnFooter:hover{
+    background-color: blueviolet;
+    color: antiquewhite;
+}
+/* mediaquery */
+@media only screen and (max-width:900px){
+    .carrito{
+        width: 70%;
+    }
+  }
+@media only screen and (max-width:700px){
+    .carrito__item{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+    }
+  }
