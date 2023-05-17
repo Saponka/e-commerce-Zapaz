@@ -3,7 +3,7 @@ import Nike from "../../assets/images/Nike.jpg";
 const Header = () => {
   return (
     <header>
-      <a href="#">
+      <a href="/">
         <div className="logo">
           <img src={Nike} alt="logo" width="150" />
         </div>
