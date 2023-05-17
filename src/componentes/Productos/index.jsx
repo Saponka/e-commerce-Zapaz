@@ -44,7 +44,7 @@ const ProductosLista = () => {
           </div>
           <div className="button">
             <button className="btn">Añadir</button>
-            <button className="btn2"><Link  to={`detalle/${zapa.id}`}>Vista</Link></button>
+            <Link   to={`detalle/${zapa.id}`} ><button className="btn2">Vista</button></Link>
             
             {/* <a href={`detalle/${id+1}`} className="btn2"><button className="btn2">Vista</button></a> */}
           </div>
