@@ -45,7 +45,6 @@ const ProductosLista = () => {
           <div className="button">
             <button className="btn">Añadir</button>
             <Link   to={`detalle/${zapa.id}`} ><button className="btn2">Vista</button></Link>
-            
             {/* <a href={`detalle/${id+1}`} className="btn2"><button className="btn2">Vista</button></a> */}
           </div>
         </div>
