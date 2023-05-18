@@ -1,17 +1,16 @@
-import { GET_PRODUCTOS, GET_DETAIL,CART_ADD,CART_REMOVE } from "./actions";
+import { GET_PRODUCTOS, GET_DETAIL,CART_ADD,CART_REMOVE,CART_UP,CART_DOWN } from "./actions";
 
 
 const initialState = () => {
     
-    /* const cartInLocalStorage = localStorage.getItem("cart")
-    const initialCart = cartInLocalStorage ? JSON.parse(cartInLocalStorage) : [] */
+     const cartInLocalStorage = localStorage.getItem("cart")
+    const initialCart = cartInLocalStorage ? JSON.parse(cartInLocalStorage) : [] 
 
     return {
         allProductos: [],
         detail: {},
-        cart:[]
-        /* initialCart */,
-        numberCart: 0/* initialCart.length */,
+        cart: initialCart ,/* [] */
+        numberCart:  initialCart.length ,/* 0 */
         
     };
 };
@@ -72,7 +71,22 @@ export default function rootReducer(state = initialState(), action) {
                 ...state,
                 cart: newCart
             }
-        }    
+        } 
+        case CART_UP:
+            state.numberCart++
+            state.cart[action.payload].cantidad++;
+            localStorage.setItem('cart', JSON.stringify(state.cart))
+            return {
+                ...state
+            }
+        case CART_DOWN:
+            let quantity = state.cart[action.payload].cantidad;
+            if (quantity > 1) {
+                state.numberCart--;
+                state.cart[action.payload].cantidad--;
+
+                localStorage.setItem('cart', JSON.stringify(state.cart))
+            }   
       
         default:
             return state;
