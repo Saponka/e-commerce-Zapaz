@@ -5,6 +5,8 @@ export const GET_PRODUCTOS = 'GET_PRODUCTOS';
 export const GET_DETAIL = 'GET_DETAIL';
 export const CART_ADD = 'CART_ADD';
 export const CART_REMOVE = 'CART_REMOVE';
+export const CART_UP = 'CART_UP';
+export const CART_DOWN = 'CART_DOWN';
 
 
 export const getProductos = () => {
@@ -67,3 +69,21 @@ export function cartAdd(payload){
             })
         }
     }
+    export function cartUp(payload){
+        return async function(dispatch){
+            dispatch({
+                type: 'CART_UP',
+                payload
+            })
+        }
+    }
+    
+    export function cartDown(payload){
+        return async function(dispatch){
+            dispatch({
+                type: 'CART_DOWN',
+                payload
+            })
+        }
+    }
+    
