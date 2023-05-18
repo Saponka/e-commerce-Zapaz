@@ -53,7 +53,7 @@ const Detalle = () => {
           <h1 style={{ textAlign: "center" }}>name:{producto.title}</h1>
           <p>Categoria:{producto.category}</p>
           <p className="price"> Precio:${producto.price}</p>
-          <p className="cantidad">Cantidad:{producto.cantidad}</p>
+          <p className="cantidad">Cantidad:{producto.cantidad} </p>
           <div className="botones">
             <button className="btnCarac" onClick={()=>{
               dispatch(cartAdd(producto))
