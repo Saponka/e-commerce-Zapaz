@@ -3,7 +3,7 @@ import image from "../../assets/images/Nike.jpg";
 import "./cart.css"
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { cartRemove } from "../../redux/actions";
+import { cartDown, cartRemove, cartUp } from "../../redux/actions";
 
 const Cart = () => {
 
@@ -35,9 +35,9 @@ console.log(carro);
                      <p className="price">${el.price}</p>
                   </div>
               <div className="quantityContainer">
-                 <box-icon name="up-arrow" type="solid"></box-icon>
+                 <box-icon name="up-arrow" onClick={()=>dispatch(cartUp(id))} type="solid"></box-icon>
                  <p className="cantidad"> {el.cantidad}</p>
-                 <box-icon name="down-arrow" type="solid"></box-icon>
+                 <box-icon name="down-arrow" onClick={()=>dispatch(cartDown(id))} type="solid"></box-icon>
               </div>
               <div className="remove__item">
                  <box-icon name="trash" onClick={()=>dispatch(cartRemove(el.id))}></box-icon>
