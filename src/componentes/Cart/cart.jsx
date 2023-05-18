@@ -3,6 +3,7 @@ import image from "../../assets/images/Nike.jpg";
 import "./cart.css"
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { cartRemove } from "../../redux/actions";
 
 const Cart = () => {
 
@@ -10,7 +11,10 @@ const Cart = () => {
   const carro = useSelector((state)=> state.cart);
   //const cart = localStorage.getItem('cart');
 
+
 console.log(carro);
+//let price = carro.cart.map(e=>e.price*e.quantity).reduce((a,current)=>a+current,0)
+
   return (
   <div className="carritos show">
       <div className="carrito show">
@@ -36,7 +40,7 @@ console.log(carro);
                  <box-icon name="down-arrow" type="solid"></box-icon>
               </div>
               <div className="remove__item">
-                 <box-icon name="trash"></box-icon>
+                 <box-icon name="trash" onClick={()=>dispatch(cartRemove(el.id))}></box-icon>
               </div>
               </div>
                 )
