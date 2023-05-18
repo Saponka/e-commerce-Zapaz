@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 //import IMG from "../../assets/images/img01.jpg";
 //import Data from "../../Data";
 import { useDispatch, useSelector } from "react-redux";
-import { getProductos } from "../../redux/actions";
+import { cartAdd, getProductos } from "../../redux/actions";
 import { Link } from "react-router-dom";
 
 
@@ -45,7 +45,9 @@ const ProductosLista = () => {
             <p className="price">${zapa.price}</p>
           </div>
           <div className="button">
-            <button className="btn">Añadir</button>
+          <button className="btn" onClick={()=>{
+              dispatch(cartAdd(zapa))
+            }}>Añadir</button>
             <Link   to={`detalle/${zapa.id}`} ><button className="btn2">Vista</button></Link>
             {/* <a href={`detalle/${id+1}`} className="btn2"><button className="btn2">Vista</button></a> */}
           </div>

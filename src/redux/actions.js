@@ -38,15 +38,15 @@ export function getById(id){
     }
 };
 export function cartAdd(payload){
-    let id = localStorage.getItem('productId')
-    if(id) {
-        return async function(dispatch){
+    //let id = localStorage.getItem('id')
+    if(payload) {
+        return  function(dispatch){
             dispatch({
                 type: 'CART_ADD',
                 payload
             })
         console.log(payload);
-        await axios.put(`${('http://localhost:5173/')}/carrito/${id}`, payload)
+         /* axios.put(`http://localhost:5173/carrito/${id}`, payload) */
         }
     } else {
         console.log("no se puede cargar al carro");

@@ -3,13 +3,15 @@ import { GET_PRODUCTOS, GET_DETAIL,CART_ADD,CART_REMOVE } from "./actions";
 
 const initialState = () => {
     
-    const cartInLocalStorage = localStorage.getItem("cart")
-    const initialCart = cartInLocalStorage ? JSON.parse(cartInLocalStorage) : []
+    /* const cartInLocalStorage = localStorage.getItem("cart")
+    const initialCart = cartInLocalStorage ? JSON.parse(cartInLocalStorage) : [] */
+
     return {
         allProductos: [],
         detail: {},
-        cart:initialCart,
-        numberCart: initialCart.length,
+        cart:[]
+        /* initialCart */,
+        numberCart: 0/* initialCart.length */,
         
     };
 };
