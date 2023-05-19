@@ -10,7 +10,7 @@ const Cart = () => {
   const dispatch = useDispatch();
   const carro = useSelector((state)=> state.cart);
   //const cart = localStorage.getItem('cart');
-
+const quantity = useSelector((state)=>state.numberCart)
 
 console.log(carro);
 //let price = carro.cart.map(e=>e.price*e.quantity).reduce((a,current)=>a+current,0)
