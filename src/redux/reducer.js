@@ -32,7 +32,7 @@ export default function rootReducer(state = initialState(), action) {
                 if (state.numberCart === 0) {
                     let cart = {
                         id: action.payload.id,
-                        cantidad: 1,
+                        cantidad: action.payload.cantidad,
                         title: action.payload.title,
                         image: action.payload.image,
                         price: action.payload.price
@@ -84,8 +84,10 @@ export default function rootReducer(state = initialState(), action) {
             if (quantity > 1) {
                 state.numberCart--;
                 state.cart[action.payload].cantidad--;
-
-                localStorage.setItem('cart', JSON.stringify(state.cart))
+                localStorage.setItem('cart', JSON.stringify(state.cart));
+                return {
+                    ...state
+                }
             }   
       
         default:
