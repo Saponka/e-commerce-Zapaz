@@ -1,10 +1,14 @@
 import React from "react";
 import Nike from "../../assets/images/Nike.jpg";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Header = () => {
 
-    
+  const quantity = useSelector((state)=>state.numberCart)
+
+  
+  console.log("numberCartHeader:",quantity);
 
   return (
     <header>
@@ -24,7 +28,7 @@ const Header = () => {
         <Link to="/carrito">
        <div className="cart">
         <box-icon name="cart"></box-icon>
-        <span className="item_total"> 0</span>
+        <span className="item_total"> {quantity}</span>
       </div>
       </Link>
     </header>

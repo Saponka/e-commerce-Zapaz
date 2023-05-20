@@ -9,12 +9,12 @@ const Cart = () => {
   const dispatch = useDispatch();
   const carro = useSelector((state)=> state.cart);
   //const cart = localStorage.getItem('cart');
- const quantity = useSelector((state)=>state.numberCart)
+  const quantity = useSelector((state)=>state.numberCart)
 
-console.log(carro);
-console.log("numberCart:",quantity);
+ console.log(carro);
+ console.log("numberCart:",quantity);
 
-//let price = carro.map(e=>e.price*e.cantidad).reduce((a,current)=>a+current,0)
+  let price = carro.map(e=>e.price*e.cantidad).reduce((a,current)=>a+current,0)
 
   return (
   <div className="carritos show">
@@ -48,7 +48,7 @@ console.log("numberCart:",quantity);
               })}
          </div>
          <div className="carrito__footer">
-             <h3>Total:$5211</h3>
+             <h3>Total:${price}</h3>
              <button className="btnFooter">Payment</button>
          </div>
     </div>
