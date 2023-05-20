@@ -65,11 +65,13 @@ export default function rootReducer(state = initialState(), action) {
                 }
         }
         case CART_REMOVE: {
-            const newCart = state.cart.filter(item => item.id !== action.payload)
+
+            const newCart = state.cart.filter(item => item.id !== action.payload);    
             localStorage.setItem('cart', JSON.stringify(newCart))
             return {
                 ...state,
-                cart: newCart
+                cart: newCart,
+                numberCart: state.numberCart - 1     
             }
         } 
         case CART_UP:
