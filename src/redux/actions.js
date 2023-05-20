@@ -41,49 +41,75 @@ export function getById(id){
 };
 export function cartAdd(payload){
     //let id = localStorage.getItem('id')
-    if(payload) {
-        return  function(dispatch){
-            dispatch({
-                type: 'CART_ADD',
-                payload
-            })
-        console.log(payload);
-         /* axios.put(`http://localhost:5173/carrito/${id}`, payload) */
-        }
-    } else {
-        console.log("no se puede cargar al carro");
-        /* swal({
-            title: "Oppps...",
-            text: "Tienes que tener tu sesión inciada para agregar cosas al carrito",
-            icon: "error",
-            dangerMode: true,
-            timer: 3000
-          }) */
-    } 
+     try {
+        if(payload) {
+            return  function(dispatch){
+                dispatch({
+                    type: CART_ADD,
+                    payload
+                })
+            console.log(payload);
+             /* axios.put(`http://localhost:5173/carrito/${id}`, payload) */
+            }
+        } else {
+            console.log("no se puede cargar al carro");
+            /* swal({
+                title: "Oppps...",
+                text: "Tienes que tener tu sesión inciada para agregar cosas al carrito",
+                icon: "error",
+                dangerMode: true,
+                timer: 3000
+              }) */
+        } 
+     } catch (error) {
+        console.log(error);
+     }
+    
     }
-    export function cartRemove(payload){
+
+export function cartRemove(payload){
+        
         return async function(dispatch){
-            dispatch({
-                type: 'CART_REMOVE',
-                payload
-            })
+               try {
+                 dispatch({
+                    type: CART_REMOVE,
+                    payload
+                })
+               } 
+               catch (error) {
+                console.log(error);
+               }    
         }
     }
-    export function cartUp(payload){
+
+ export function cartUp(payload){
+
         return async function(dispatch){
-            dispatch({
-                type: 'CART_UP',
-                payload
-            })
+
+            try {
+                dispatch({
+                    type: CART_UP,
+                    payload
+                }) 
+            } catch (error) {
+                console.log(error);
+            } 
         }
     }
     
-    export function cartDown(payload){
+export function cartDown(payload){
+
         return async function(dispatch){
-            dispatch({
-                type: 'CART_DOWN',
-                payload
-            })
+
+            try {
+                dispatch({
+                    type: CART_DOWN,
+                    payload
+                })
+            } catch (error) {
+                console.log(error);
+            }
+            
         }
     }
     
