@@ -11,7 +11,7 @@ const Inicio = () => {
            de zapatillas mas grande del mundo
       `}
       </pre>
-      <a href="/productos">Home</a>
+      <a href="/productos" style={{fontSize:"3rem", textAlign:"center"}}>Home</a>
     </div>
   )
 }
