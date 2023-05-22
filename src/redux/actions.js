@@ -50,6 +50,7 @@ export function cartAdd(payload){
                 })
             console.log(payload);
              /* axios.put(`http://localhost:5173/carrito/${id}`, payload) */
+             alert("Producto agregado");
             }
         } else {
             console.log("no se puede cargar al carro");
