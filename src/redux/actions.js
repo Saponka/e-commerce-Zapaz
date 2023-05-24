@@ -1,4 +1,5 @@
 import axios from 'axios';
+import swal from "sweetalert2";
 import Data from '../Data';
 
 export const GET_PRODUCTOS = 'GET_PRODUCTOS';
@@ -50,7 +51,16 @@ export function cartAdd(payload){
                 })
             console.log(payload);
              /* axios.put(`http://localhost:5173/carrito/${id}`, payload) */
-             alert("Producto agregado");
+             //alert("Producto agregado");
+              swal.fire({
+                position: 'top',
+                title: "Producto agregado al carrito",
+                icon: "success",
+                iconColor:"green",
+                background:"cadetblue",
+                showConfirmButton: false,
+                timer: 3000
+              }) 
             }
         } else {
             console.log("no se puede cargar al carro");
@@ -76,6 +86,15 @@ export function cartRemove(payload){
                     type: CART_REMOVE,
                     payload
                 })
+                swal.fire({
+                    position: 'top',
+                    title: "Producto Eliminado del Carrito",
+                    icon: "warning",
+                    iconColor:"red",
+                    background:"whitesmoke", 
+                    showConfirmButton: false,
+                    timer: 1500
+                  }) 
                } 
                catch (error) {
                 console.log(error);
