@@ -67,10 +67,10 @@ export function cartAdd(payload){
             console.log("no se puede cargar al carro");
             /* swal({
                 title: "Oppps...",
-                text: "Tienes que tener tu sesión inciada para agregar cosas al carrito",
+                text: "No se puede agregar cosas al carrito",
                 icon: "error",
                 dangerMode: true,
-                timer: 3000
+                timer: 1500
               }) */
         } 
      } catch (error) {
