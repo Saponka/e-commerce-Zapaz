@@ -57,8 +57,9 @@ export function cartAdd(payload){
                 title: "Producto agregado al carrito",
                 icon: "success",
                 iconColor:"green",
-                background:"cadetblue",
+                background:"whitesmoke",
                 showConfirmButton: false,
+                toast: true,
                 timer: 3000
               }) 
             }
@@ -93,6 +94,7 @@ export function cartRemove(payload){
                     iconColor:"red",
                     background:"whitesmoke", 
                     showConfirmButton: false,
+                    toast: true,
                     timer: 1500
                   }) 
                } 
